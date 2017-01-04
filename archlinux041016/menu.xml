@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+
+<menu id="apps-accessories-menu" label="Accessories">
+  <item label="VirtualBox">
+    <action name="Execute">
+      <command>virtualbox</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+</menu>
+
+<menu id="apps-term-menu" label="Terminals">
+  <item label="Xterm">
+    <action name="Execute"><command>xterm</command></action>
+  </item>
+</menu>
+
+<menu id="apps-net-menu" label="Internet">
+  <item label="Chromium">
+    <action name="Execute">
+      <command>chromium</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Qutebrowser">
+    <action name="Execute">
+      <command>qutebrowser</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="XChat">
+    <action name="Execute">
+      <command>xchat</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+</menu>
+
+<menu id="apps-multimedia-menu" label="Multimedia">
+  <item label="VLC">
+    <action name="Execute">
+      <command>vlc</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+</menu>
+
+<menu id="system-menu" label="System">
+  <item label="Reconfigure Openbox">
+    <action name="Reconfigure" />
+  </item>
+</menu>
+
+<menu id="root-menu" label="Openbox 3">
+  <separator label="Applications" />
+  <menu id="apps-accessories-menu"/>
+  <menu id="apps-net-menu"/>
+  <menu id="apps-multimedia-menu"/>
+  <menu id="apps-term-menu"/>
+  <separator label="System" />
+  <menu id="system-menu"/>
+  <separator />
+  <item label="Log Out">
+    <action name="Exit">
+      <prompt>yes</prompt>
+    </action>
+  </item>
+</menu>
+
+</openbox_menu>

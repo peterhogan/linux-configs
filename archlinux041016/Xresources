@@ -1,0 +1,3 @@
+XTerm*foreground: PapayaWhip
+XTerm*background: rgb:00/00/80
+XTerm*geometry: 125x35

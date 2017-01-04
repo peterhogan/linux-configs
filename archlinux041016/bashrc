@@ -1,0 +1,37 @@
+# ~/.bashrc
+
+[ -n "$XTERM_VERSION" ] && transset-df --id "$WINDOWID" >/dev/null
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+#PS1='[\u@\h \W]\$ '
+
+GREEN="\[$(tput setaf 2)\]"
+PINK="\[$(tput setaf 5)\]"
+YELLOW="\[$(tput setaf 3)\]"
+RESET="\[$(tput sgr0)\]"
+
+function proml
+{
+case $TERM in
+    xterm*)
+        local TITLEBAR='\[\033]0;\u@\h:\w\007\]'
+        ;;
+    *)
+        local TITLEBAR=''
+        ;;
+esac
+
+PS1="${TITLEBAR}\
+$GREEN[\$(date +%H:%M)]\
+$YELLOW[\u@\h:\w]\
+$PINK\$\
+$RESET "
+PS2='> '
+PS4='+ '
+}
+
+
+proml

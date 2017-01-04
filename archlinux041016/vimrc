@@ -1,0 +1,10 @@
+set ruler
+set hlsearch
+set number
+
+syntax enable
+set expandtab
+set shiftwidth=4
+set tabstop=4
+
+filetype plugin indent on
