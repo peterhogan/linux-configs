@@ -18,3 +18,4 @@
 #
 xrdb -merge -I$HOME ~/.Xresources
 conky -c ~/conky_left.conf &
+xcompmgr -c -C -f &
